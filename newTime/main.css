@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+    font-size: 100px;
+    font-weight: 600;   
+    background-color: rgb(1, 1, 43);
+    color: #fff;
+}
+
+.parent{
+    position: relative;
+    background: rgba(255, 255, 255, 0.123);
+    padding: 80px 75px;
+    border-radius: 30px;
+    z-index: 10;
+    backdrop-filter: blur(20px);
+}
+
+.box-one{
+        position: absolute;
+        top: 10%;
+        right: 20%;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background: linear-gradient(#f9d924,#ff2c24);
+        animation: animate 4s ease-in-out infinite alternate;
+}
+
+.box-two{
+        position: absolute;
+        bottom: 10%;
+        left: 20%;
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        background: linear-gradient(#01d6ff,#0f24f9);
+        animation-direction: alternate;
+        animation: animate-two 4s ease-in-out infinite alternate;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(50px);
+    }
+}
+
+@keyframes animate-two{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
+.bg{
+    background: rgba(255,255,255,0.05);
+    padding: 20px 25px;
+    border-radius: 30px;
+}
+
+.second{
+    color: yellow;
+}
+
+.info{
+    content: 'PM';
+    position: absolute;
+    font-size: 35px;
+    right: 15px;
+    top: 40px;
+}
